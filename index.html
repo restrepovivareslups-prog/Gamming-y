@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101014">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <title>Funnel Master — El reto del embudo de ventas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Funnel Master, inicio"><span class="brand-mark">F<span>M</span></span><span>FUNNEL<span class="gold"> MASTER</span><small>MARKETING SIMULATOR</small></span></a>
+    <div class="top-stats"><button id="installAppBtn" class="install-btn" hidden>＋ Instalar app</button><span class="pill">NIVEL <b id="levelTop">01</b></span><span class="pill">XP <b id="xpTop">0</b></span><button id="soundlessReset" class="icon-btn" title="Reiniciar progreso" aria-label="Reiniciar progreso">↻</button></div>
+  </header>
+
+  <main class="shell">
+    <section id="homeScreen" class="screen active">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> SIMULADOR DE ESTRATEGIA DIGITAL</div>
+          <h1>Convierte visitas<br>en <span class="gradient-text">clientes fieles.</span></h1>
+          <p class="hero-lead">Toma decisiones, construye tu embudo y salva una empresa. Cada estrategia cambia tus resultados.</p>
+          <div class="hero-actions"><button class="btn btn-primary" id="startBtn">Iniciar misión <span>↗</span></button><button class="btn btn-secondary" id="tutorialBtn">¿Cómo se juega?</button></div>
+          <div class="hero-proof"><div><strong>05</strong><span>ETAPAS</span></div><div><strong>05</strong><span>MODOS</span></div><div><strong>∞</strong><span>ESTRATEGIAS</span></div></div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-top"><span>LIVE ANALYTICS</span><span class="status">● SISTEMA ACTIVO</span></div>
+          <div class="funnel-stage stage-a"><span>01 / ATRACCIÓN</span><b>1.000</b><small>visitantes</small></div>
+          <div class="funnel-stage stage-b"><span>02 / INTERÉS</span><b>300</b><small>leads potenciales</small></div>
+          <div class="funnel-stage stage-c"><span>03 / CONSIDERACIÓN</span><b>150</b><small>interesados</small></div>
+          <div class="funnel-stage stage-d"><span>04 / CONVERSIÓN</span><b>30</b><small>compradores</small></div>
+          <div class="funnel-stage stage-e"><span>05 / FIDELIZACIÓN</span><b>12</b><small>clientes recurrentes</small></div>
+          <div class="visual-foot"><span>CONVERSIÓN INICIAL</span><strong>3,0%</strong><span class="mini-line">↗</span></div>
+        </div>
+      </div>
+      <div class="section-heading"><div><span class="eyebrow">ELIGE TU DESAFÍO</span><h2>Tu próxima misión</h2></div><span class="muted">Aprende jugando · Mejora con cada decisión</span></div>
+      <div class="mode-grid">
+        <button class="mode-card" data-mode="build"><span class="mode-icon">⌘</span><span class="mode-number">MODO 01</span><strong>Construye tu embudo</strong><small>Clasifica estrategias en la etapa correcta.</small><span class="card-arrow">↗</span></button>
+        <button class="mode-card" data-mode="save"><span class="mode-icon">⚡</span><span class="mode-number">MODO 02</span><strong>Salva la empresa</strong><small>Resuelve problemas reales de marketing.</small><span class="card-arrow">↗</span></button>
+        <button class="mode-card" data-mode="mystery"><span class="mode-icon">◉</span><span class="mode-number">MODO 03</span><strong>Cliente misterioso</strong><small>Descubre qué necesita cada comprador.</small><span class="card-arrow">↗</span></button>
+        <button class="mode-card" data-mode="race"><span class="mode-icon">◷</span><span class="mode-number">MODO 04</span><strong>Carrera contra el tiempo</strong><small>Responde antes de que termine el reloj.</small><span class="card-arrow">↗</span></button>
+        <button class="mode-card wide-card" data-mode="campaign"><span class="mode-icon">✦</span><span class="mode-number">MODO 05</span><strong>Crea tu propia campaña</strong><small>Diseña una estrategia de principio a fin y recibe una evaluación.</small><span class="card-arrow">↗</span></button>
+      </div>
+      <section class="dashboard panel">
+        <div class="section-heading compact"><div><span class="eyebrow">CENTRO DE CONTROL</span><h2>Estado de tu empresa</h2></div><span class="pill">DATOS SIMULADOS</span></div>
+        <div class="metric-grid">
+          <div class="metric"><span>Visitantes</span><strong id="visitorsMetric">1.000</strong><small>Alcance de campaña</small></div>
+          <div class="metric"><span>Leads</span><strong id="leadsMetric">300</strong><small>Clientes potenciales</small></div>
+          <div class="metric"><span>Compradores</span><strong id="buyersMetric">30</strong><small>Ventas realizadas</small></div>
+          <div class="metric"><span>Conversión</span><strong id="conversionMetric">3,0%</strong><small>Compradores / visitantes</small></div>
+        </div>
+        <div class="dashboard-bottom"><div><div class="metric-label-row"><span>Confianza en la marca</span><b id="trustLabel">50/100</b></div><div class="progress"><span id="trustBar" style="width:50%"></span></div></div><div><div class="metric-label-row"><span>Fidelización</span><b id="loyaltyLabel">40/100</b></div><div class="progress red-progress"><span id="loyaltyBar" style="width:40%"></span></div></div><div class="revenue-box"><span>INGRESOS SIMULADOS</span><strong id="revenueMetric">$3.000.000</strong></div></div>
+      </section>
+    </section>
+
+    <section id="tutorialScreen" class="screen">
+      <button class="back-link" data-home>← Volver al menú</button>
+      <div class="content-wrap"><span class="eyebrow">GUÍA RÁPIDA</span><h1>Todo gran resultado<br>empieza con <span class="gradient-text">una estrategia.</span></h1>
+        <p class="hero-lead">Un embudo de ventas representa el camino que recorre una persona desde que conoce una marca hasta que compra y vuelve.</p>
+        <div class="lesson-grid">
+          <article><span class="lesson-num">01</span><h3>Atracción</h3><p>Haz que nuevas personas descubran la marca. Ejemplo: videos, anuncios o publicaciones compartibles.</p></article>
+          <article><span class="lesson-num">02</span><h3>Interés</h3><p>Ofrece contenido útil que motive a conocer más. Ejemplo: guías, consejos o una suscripción.</p></article>
+          <article><span class="lesson-num">03</span><h3>Consideración</h3><p>Ayuda a comparar y resolver dudas. Ejemplo: demostraciones, reseñas y preguntas frecuentes.</p></article>
+          <article><span class="lesson-num">04</span><h3>Conversión</h3><p>Facilita la compra con un proceso claro, una oferta relevante y un pago sencillo.</p></article>
+          <article><span class="lesson-num">05</span><h3>Fidelización</h3><p>Cuida la relación después de la venta con soporte, seguimiento y recompensas.</p></article>
+        </div>
+        <div class="callout"><strong>Tu objetivo:</strong> no basta con atraer muchas visitas. Debes ayudar a que las personas adecuadas avancen por cada etapa.</div>
+        <button class="btn btn-primary" data-home>¡Estoy listo! <span>↗</span></button>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <button class="back-link" data-home>← Volver al menú</button>
+      <div class="game-header"><div><span class="eyebrow" id="gameEyebrow">MODO 01</span><h1 id="gameTitle">Construye tu embudo</h1><p id="gameSubtitle" class="muted">Relaciona cada estrategia con la etapa adecuada.</p></div><div class="game-hud"><span class="pill">XP <b id="gameXP">0</b></span><span class="pill timer-pill" id="timerPill" hidden>⏱ <b id="timer">30</b>s</span></div></div>
+      <div id="gameContent" class="game-content"></div>
+      <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+      <div class="game-footer"><button class="btn btn-secondary" id="restartMode">Reiniciar modo</button><button class="btn btn-primary" id="continueBtn" hidden>Continuar <span>→</span></button></div>
+    </section>
+
+    <section id="resultsScreen" class="screen">
+      <div class="results-hero"><div class="result-emblem">✦</div><span class="eyebrow">MISIÓN COMPLETADA</span><h1 id="resultTitle">Buen trabajo, estratega.</h1><p id="resultSummary" class="hero-lead">Tu estrategia ha sido evaluada.</p><div class="score-circle"><strong id="resultScore">0</strong><span>XP GANADOS</span></div><div class="rank-label" id="resultRank">APRENDIZ DEL MARKETING</div></div>
+      <div class="results-grid"><div class="panel result-stat"><span>Respuestas correctas</span><strong id="resultCorrect">0</strong></div><div class="panel result-stat"><span>Precisión</span><strong id="resultAccuracy">0%</strong></div><div class="panel result-stat"><span>Conversión actual</span><strong id="resultConversion">3,0%</strong></div></div>
+      <div class="callout" id="resultTip">Sigue practicando para mejorar tu estrategia.</div>
+      <div class="hero-actions centered"><button class="btn btn-primary" data-home>Volver al menú</button><button class="btn btn-secondary" id="playAgain">Jugar otra vez</button></div>
+    </section>
+  </main>
+  <footer><span>FUNNEL MASTER © 2026</span><span>Aprender · Decidir · Convertir</span><span>Simulación educativa, no datos reales.</span></footer>
+  <script>
+    // Registro PWA: permite instalar Funnel Master y usarlo sin conexión tras la primera carga.
+    if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(console.error));
+    }
+  </script>
+  <script src="js/challenges.js"></script>
+  <script src="js/statistics.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
